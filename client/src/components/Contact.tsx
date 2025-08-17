@@ -64,10 +64,10 @@ export default function Contact() {
   };
 
   const services = [
-    "Systems Programming & Performance Optimization",
-    "Web Application Development",
-    "Technical Architecture & Consulting",
-    "Code Review & Mentoring",
+    "Web Development & Frontend Design",
+    "Backend Development & Database Management",
+    "Game Development & Interactive Applications",
+    "Algorithm Implementation & Problem Solving",
   ];
 
   return (
@@ -104,7 +104,7 @@ export default function Contact() {
                       href="mailto:zenios@example.com"
                       className="text-white font-medium hover:text-blue-400 transition-colors duration-200"
                     >
-                      zenios@example.com
+                      alex.kavaleuskiy98@gmail.com
                     </a>
                   </div>
                 </div>
@@ -116,12 +116,12 @@ export default function Contact() {
                   <div>
                     <p className="text-slate-400 text-sm">LinkedIn</p>
                     <a
-                      href="https://linkedin.com/in/zenios-zeniou-96a57a11b"
+                      href="https://www.linkedin.com/in/aleksander-kavaleuskiy-8b2682349/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-white font-medium hover:text-blue-400 transition-colors duration-200"
                     >
-                      zenios-zeniou-96a57a11b
+                      https://www.linkedin.com/in/aleksander-kavaleuskiy-8b2682349/
                     </a>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-slate-400 text-sm">Location</p>
-                    <p className="text-white font-medium">Stockholm, Sweden</p>
+                    <p className="text-white font-medium">Larnaca, Cyprus</p>
                   </div>
                 </div>
               </div>

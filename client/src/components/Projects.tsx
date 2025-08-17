@@ -1,51 +1,79 @@
+import { useState } from "react";
+
 export default function Projects() {
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+
   const projects = [
     {
-      title: "Game Engine Core",
+      title: "Dino Run Game",
       description:
-        "High-performance game engine built with Rust, featuring advanced rendering capabilities, physics simulation, and cross-platform compatibility. Optimized for AAA game development.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      imageAlt: "High-performance gaming engine interface with code and graphics",
-      technologies: ["Rust", "OpenGL", "WebGPU"],
-      techColors: ["orange", "blue", "green"],
-      metrics: ["Performance: 120+ FPS", "Cross-platform"],
-      githubUrl: "https://github.com",
+        "A Python-based endless runner game built with Tkinter where a dinosaur jumps over cactuses to survive as long as possible. Features smooth gameplay mechanics and increasing difficulty levels.",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      imageAlt: "Dinosaur game interface with jumping character and obstacles",
+      technologies: ["Python", "Tkinter", "Game Development"],
+      techColors: ["blue", "green", "purple"],
+      metrics: ["Endless Runner", "Python Game"],
+      githubUrl: "https://github.com/AKavaa/DinoRun-Game",
       liveUrl: "#",
     },
     {
-      title: "Analytics Platform",
+      title: "UCLan Website",
       description:
-        "Real-time analytics platform processing millions of events daily. Features interactive dashboards, custom reporting, and machine learning-powered insights for business intelligence.",
+        "A comprehensive web application built for UCLan featuring a complete e-commerce system with product management, shopping cart functionality, and modern responsive design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      imageAlt: "Modern web application dashboard with analytics and data visualization",
-      technologies: ["TypeScript", "React", "Node.js"],
-      techColors: ["blue", "cyan", "green"],
-      metrics: ["10M+ events/day", "Real-time processing"],
-      githubUrl: "https://github.com",
+      imageAlt: "Modern university website with e-commerce features",
+      technologies: ["HTML", "CSS", "PHP", "JavaScript"],
+      techColors: ["orange", "blue", "purple", "yellow"],
+      metrics: ["E-commerce System", "Responsive Design"],
+      githubUrl: "https://github.com/AKavaa/UCLan-Website",
       liveUrl: "#",
     },
     {
-      title: "DeFi Protocol",
+      title: "Spheres.io",
       description:
-        "Decentralized finance protocol built on Ethereum, enabling secure lending and borrowing with smart contracts. Features automated market making and yield farming capabilities.",
-      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      imageAlt: "Blockchain technology interface with cryptocurrency and network visualization",
-      technologies: ["Solidity", "Rust", "Web3"],
-      techColors: ["purple", "orange", "blue"],
-      metrics: ["$50M+ TVL", "Gas optimized"],
-      githubUrl: "https://github.com",
+        "A single-player 3D C++ game where the player controls a sphere to collect cubes for points. Features magnetic attraction mechanics and growing sphere gameplay.",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      imageAlt: "3D sphere game with cube collection mechanics",
+      technologies: ["C++", "3D Graphics", "Game Physics"],
+      techColors: ["orange", "purple", "blue"],
+      metrics: ["3D Game", "C++ Development"],
+      githubUrl: "https://github.com/AKavaa/Spheres.io",
       liveUrl: "#",
     },
     {
-      title: "ML Pipeline",
+      title: "Treasure Hunt App",
       description:
-        "High-performance machine learning pipeline for real-time inference. Built with Rust for maximum efficiency, supporting multiple model formats and auto-scaling capabilities.",
+        "An immersive, team-built web application designed to guide users through a fun and interactive location-based treasure hunt experience with puzzle-solving elements.",
       image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      imageAlt: "AI machine learning system interface with neural networks and data processing",
-      technologies: ["Rust", "TensorFlow", "Docker"],
-      techColors: ["orange", "red", "gray"],
-      metrics: ["Sub-ms latency", "Auto-scaling"],
-      githubUrl: "https://github.com",
+      imageAlt: "Interactive treasure hunt application interface",
+      technologies: ["JavaScript", "Web Development", "Location Services"],
+      techColors: ["yellow", "blue", "green"],
+      metrics: ["Interactive App", "Location-based"],
+      githubUrl: "https://github.com/AKavaa/TreasureHuntApp",
+      liveUrl: "#",
+    },
+    {
+      title: "Sudoku Solver",
+      description:
+        "An efficient C++ algorithm that solves Sudoku puzzles given by the user. Implements backtracking and constraint satisfaction techniques for optimal puzzle solving.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      imageAlt: "Sudoku puzzle solver algorithm interface",
+      technologies: ["C++", "Algorithms", "Backtracking"],
+      techColors: ["orange", "purple", "blue"],
+      metrics: ["Algorithm Implementation", "C++"],
+      githubUrl: "https://github.com/AKavaa/SudokuSolver",
+      liveUrl: "#",
+    },
+    {
+      title: "Web Technologies Assignment",
+      description:
+        "Advanced web development project showcasing modern web technologies with comprehensive features including user authentication, database management, and responsive design.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      imageAlt: "Modern web application with advanced features",
+      technologies: ["PHP", "MySQL", "HTML", "CSS"],
+      techColors: ["purple", "blue", "orange", "blue"],
+      metrics: ["Full-stack Development", "Database Design"],
+      githubUrl: "https://github.com/AKavaa/Web-Technologies--Assignment-2",
       liveUrl: "#",
     },
   ];
@@ -59,88 +87,127 @@ export default function Projects() {
       purple: "bg-purple-500/20 text-purple-300 border-purple-500/30",
       red: "bg-red-500/20 text-red-300 border-red-500/30",
       gray: "bg-slate-500/20 text-slate-300 border-slate-500/30",
+      yellow: "bg-yellow-500/20 text-yellow-300 border-yellow-500/30",
     };
     return colorMap[color] || "bg-slate-500/20 text-slate-300 border-slate-500/30";
   };
 
   return (
-    <section id="projects" className="py-20 bg-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 bg-slate-900 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-24 h-24 bg-blue-500/5 rounded-full animate-float-slow"></div>
+        <div className="absolute top-40 right-32 w-20 h-20 bg-emerald-500/5 rounded-lg animate-float-fast" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute bottom-32 left-1/3 w-16 h-16 bg-purple-500/5 rounded-full animate-pulse-slow"></div>
+        <div className="absolute top-1/2 right-1/3 w-12 h-12 bg-cyan-500/5 rounded-lg animate-spin-slow"></div>
+        <div className="absolute bottom-20 right-20 w-28 h-28 bg-yellow-500/5 rounded-full animate-float-slow" style={{ animationDelay: "2s" }}></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Featured Projects</h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            A showcase of my recent work spanning systems programming, web development, and
-            innovative applications.
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 animate-fade-in-up">Featured Projects</h2>
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+            A showcase of my academic and personal projects spanning game development, web applications,
+            and algorithmic problem-solving.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-slate-700"
+              className={`bg-slate-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 transform group border border-slate-700 animate-fade-in-up`}
+              style={{ 
+                animationDelay: `${index * 0.1}s`,
+                transform: hoveredProject === index ? 'scale(1.05) rotateY(5deg)' : 'scale(1) rotateY(0deg)'
+              }}
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.imageAlt}
-                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-              </div>
-              <div className="p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-2xl font-bold text-white">{project.title}</h3>
-                  <div className="flex space-x-2">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
-                    >
-                      <i className="fab fa-github text-xl"></i>
-                    </a>
-                    <a
-                      href={project.liveUrl}
-                      className="text-slate-400 hover:text-blue-400 transition-colors duration-200"
-                    >
-                      <i className="fas fa-external-link-alt text-xl"></i>
-                    </a>
-                  </div>
-                </div>
-                <p className="text-slate-300 mb-6 leading-relaxed">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.technologies.map((tech, techIndex) => (
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent group-hover:from-slate-900/60 group-hover:via-slate-900/20 transition-all duration-500"></div>
+                
+                {/* Floating tech badges */}
+                <div className="absolute top-4 right-4 flex flex-col gap-2">
+                  {project.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={tech}
-                      className={`px-3 py-1 rounded-full text-sm font-medium border ${getColorClass(
-                        project.techColors[techIndex]
-                      )}`}
+                      className={`px-2 py-1 rounded-full text-xs font-medium border opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-300 ${getColorClass(project.techColors[techIndex])}`}
+                      style={{ transitionDelay: `${techIndex * 0.1}s` }}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-                <div className="border-t border-slate-700 pt-4">
-                  <div className="flex items-center justify-between text-sm text-slate-400">
-                    <span>{project.metrics[0]}</span>
-                    <span>{project.metrics[1]}</span>
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
+                  <div className="flex space-x-2">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                    >
+                      <i className="fab fa-github text-lg group-hover:animate-bounce"></i>
+                    </a>
+                    {project.liveUrl !== "#" && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                      >
+                        <i className="fas fa-external-link-alt text-lg group-hover:animate-bounce"></i>
+                      </a>
+                    )}
+                  </div>
+                </div>
+                
+                <p className="text-slate-300 mb-4 leading-relaxed text-sm group-hover:text-slate-200 transition-colors duration-300">{project.description}</p>
+                
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={tech}
+                      className={`px-2 py-1 rounded-full text-xs font-medium border transition-all duration-300 transform hover:scale-105 hover:rotate-1 ${getColorClass(project.techColors[techIndex])}`}
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="border-t border-slate-700 pt-3">
+                  <div className="flex items-center justify-between text-xs text-slate-400">
+                    <span className="group-hover:text-emerald-400 transition-colors duration-300">{project.metrics[0]}</span>
+                    <span className="group-hover:text-blue-400 transition-colors duration-300">{project.metrics[1]}</span>
                   </div>
                 </div>
               </div>
+              
+              {/* Hover overlay effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
           <a
-            href="https://github.com"
+            href="https://github.com/AKavaa"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 border-2 border-slate-600 text-slate-300 font-medium rounded-lg hover:border-blue-600 hover:text-blue-400 transition-colors duration-200"
+            className="group inline-flex items-center px-6 py-3 border-2 border-slate-600 text-slate-300 font-medium rounded-lg hover:border-blue-600 hover:text-blue-400 transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
           >
-            View All Projects
-            <i className="fab fa-github ml-2"></i>
+            View All Projects on GitHub
+            <i className="fab fa-github ml-2 group-hover:animate-bounce"></i>
+            <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-200"></i>
           </a>
         </div>
       </div>
