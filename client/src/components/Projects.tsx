@@ -8,7 +8,7 @@ export default function Projects() {
       title: "Dino Run Game",
       description:
         "A Python-based endless runner game built with Tkinter where a dinosaur jumps over cactuses to survive as long as possible. Features smooth gameplay mechanics and increasing difficulty levels.",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      image: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/31/ea/5d31ea50-3d08-d13a-6861-31a313c506f6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/1200x630wa.png",
       imageAlt: "Dinosaur game interface with jumping character and obstacles",
       technologies: ["Python", "Tkinter", "Game Development"],
       techColors: ["blue", "green", "purple"],
@@ -32,7 +32,7 @@ export default function Projects() {
       title: "Spheres.io",
       description:
         "A single-player 3D C++ game where the player controls a sphere to collect cubes for points. Features magnetic attraction mechanics and growing sphere gameplay.",
-      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      image: "https://img.freepik.com/premium-vector/ball-lightning-energy-power-electric-round-spheres-decent-vector-realistic-template-thunder-light_80590-22937.jpg",
       imageAlt: "3D sphere game with cube collection mechanics",
       technologies: ["C++", "3D Graphics", "Game Physics"],
       techColors: ["orange", "purple", "blue"],
@@ -44,7 +44,7 @@ export default function Projects() {
       title: "Treasure Hunt App",
       description:
         "An immersive, team-built web application designed to guide users through a fun and interactive location-based treasure hunt experience with puzzle-solving elements.",
-      image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      image: "https://cdn.8thwall.com/apps/cover/2mj23ocmdp5bri1474c6zv6rqmrrtp891jwjp9lhy61txl8xf571ib07-preview-1200x630",
       imageAlt: "Interactive treasure hunt application interface",
       technologies: ["JavaScript", "Web Development", "Location Services"],
       techColors: ["yellow", "blue", "green"],
@@ -56,7 +56,7 @@ export default function Projects() {
       title: "Sudoku Solver",
       description:
         "An efficient C++ algorithm that solves Sudoku puzzles given by the user. Implements backtracking and constraint satisfaction techniques for optimal puzzle solving.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
+      image: "https://images.contentstack.io/v3/assets/blt822c60c126c92e3a/blt5eafad84b9fc7361/64d291de4d5a8492f88d5b53/Sudoku_game_01_en_prev.jpg",
       imageAlt: "Sudoku puzzle solver algorithm interface",
       technologies: ["C++", "Algorithms", "Backtracking"],
       techColors: ["orange", "purple", "blue"],
@@ -117,7 +117,7 @@ export default function Projects() {
             <div
               key={index}
               className={`bg-slate-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 transform group border border-slate-700 animate-fade-in-up`}
-              style={{ 
+              style={{
                 animationDelay: `${index * 0.1}s`,
                 transform: hoveredProject === index ? 'scale(1.05) rotateY(5deg)' : 'scale(1) rotateY(0deg)'
               }}
@@ -131,7 +131,7 @@ export default function Projects() {
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent group-hover:from-slate-900/60 group-hover:via-slate-900/20 transition-all duration-500"></div>
-                
+
                 {/* Floating tech badges */}
                 <div className="absolute top-4 right-4 flex flex-col gap-2">
                   {project.technologies.slice(0, 2).map((tech, techIndex) => (
@@ -145,7 +145,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
@@ -170,9 +170,9 @@ export default function Projects() {
                     )}
                   </div>
                 </div>
-                
+
                 <p className="text-slate-300 mb-4 leading-relaxed text-sm group-hover:text-slate-200 transition-colors duration-300">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
@@ -183,7 +183,7 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="border-t border-slate-700 pt-3">
                   <div className="flex items-center justify-between text-xs text-slate-400">
                     <span className="group-hover:text-emerald-400 transition-colors duration-300">{project.metrics[0]}</span>
@@ -191,7 +191,7 @@ export default function Projects() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Hover overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
             </div>
