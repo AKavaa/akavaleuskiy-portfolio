@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+Projects
 import { useState } from "react";
 
 export default function Projects() {
@@ -93,7 +103,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="py-20 bg-slate-900 relative overflow-hidden">
+    <section id="projects" className="py-20 bg-slate-900 relative overflow-hidden scroll-mt-24">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-24 h-24 bg-blue-500/5 rounded-full animate-float-slow"></div>
@@ -128,6 +138,8 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.imageAlt}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent group-hover:from-slate-900/60 group-hover:via-slate-900/20 transition-all duration-500"></div>
@@ -214,3 +226,4 @@ export default function Projects() {
     </section>
   );
 }
+

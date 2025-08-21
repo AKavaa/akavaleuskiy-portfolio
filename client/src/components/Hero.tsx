@@ -1,3 +1,8 @@
+
+
+
+
+Hero
 import { useState, useEffect } from "react";
 
 export default function Hero() {
@@ -26,7 +31,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 pt-16 overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 pt-16 overflow-hidden scroll-mt-24"
     >
       {/* Enhanced floating background elements */}
       <div className="absolute inset-0 overflow-hidden">

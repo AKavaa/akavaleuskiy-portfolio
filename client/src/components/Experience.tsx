@@ -1,3 +1,7 @@
+
+
+
+Experience
 export default function Experience() {
   const experiences = [
     {
@@ -51,7 +55,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-slate-800">
+    <section id="experience" className="py-20 bg-slate-800 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Experience & Education</h2>
@@ -77,11 +81,10 @@ export default function Experience() {
                   </div>
                   <div className="mt-4 lg:mt-0">
                     <span
-                      className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${
-                        experience.current
-                          ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
-                          : "bg-slate-700 text-slate-300 border border-slate-600"
-                      }`}
+                      className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${experience.current
+                        ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
+                        : "bg-slate-700 text-slate-300 border border-slate-600"
+                        }`}
                     >
                       {experience.period}
                     </span>
@@ -125,11 +128,10 @@ export default function Experience() {
                   </div>
                   <div className="mt-4 lg:mt-0">
                     <span
-                      className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${
-                        edu.current
-                          ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
-                          : "bg-slate-700 text-slate-300 border border-slate-600"
-                      }`}
+                      className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${edu.current
+                        ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                        : "bg-slate-700 text-slate-300 border border-slate-600"
+                        }`}
                     >
                       {edu.period}
                     </span>
@@ -146,3 +148,5 @@ export default function Experience() {
     </section>
   );
 }
+
+

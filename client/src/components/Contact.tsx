@@ -1,3 +1,7 @@
+
+
+
+Contact
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -25,19 +29,33 @@ export default function Contact() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormData) => {
-      return apiRequest("POST", "/api/contact", data);
+      const webhookUrl = (import.meta as any).env?.VITE_CONTACT_WEBHOOK_URL as string | undefined;
+      if (webhookUrl) {
+        const res = await fetch(webhookUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) {
+          const text = await res.text();
+          throw new Error(`${res.status}: ${text || res.statusText}`);
+        }
+        return res.json();
+      }
+      const res = await apiRequest("POST", "/api/contact", data);
+      return res.json();
     },
-    onSuccess: () => {
+    onSuccess: (json: any) => {
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: json?.message || "Thanks! Your message was sent successfully — I'll reply soon.",
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
     },
     onError: (error) => {
       toast({
         title: "Error sending message",
-        description: error.message || "Please try again later.",
+        description: (error as Error).message || "Please try again later.",
         variant: "destructive",
       });
     },
@@ -56,6 +74,8 @@ export default function Contact() {
     contactMutation.mutate(formData);
   };
 
+  const showInlineSuccess = contactMutation.isSuccess && !contactMutation.isError;
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
       ...prev,
@@ -71,7 +91,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-slate-950 text-white relative overflow-hidden">
+    <section id="contact" className="py-20 bg-slate-950 text-white relative overflow-hidden scroll-mt-24">
       {/* Abstract tech background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full opacity-60"></div>
@@ -101,7 +121,7 @@ export default function Contact() {
                   <div>
                     <p className="text-slate-400 text-sm">Email</p>
                     <a
-                      href="mailto:zenios@example.com"
+                      href="mailto:alex.kavaleuskiy98@gmail.com"
                       className="text-white font-medium hover:text-blue-400 transition-colors duration-200"
                     >
                       alex.kavaleuskiy98@gmail.com
@@ -219,6 +239,9 @@ export default function Contact() {
               >
                 {contactMutation.isPending ? "Sending..." : "Send Message"}
               </Button>
+              {showInlineSuccess && (
+                <p className="text-emerald-400 text-sm text-center">Thanks! Your message was sent successfully — I’ll reply soon.</p>
+              )}
             </form>
           </div>
         </div>
@@ -226,3 +249,4 @@ export default function Contact() {
     </section>
   );
 }
+
