@@ -4,11 +4,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build outputs
-dist/
-build/
-*.tsbuildinfo
-
 # Environment variables
 .env
 .env.local
@@ -42,3 +37,10 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# Build outputs
+# If using React/Next.js or other static site generators, do NOT ignore build/output folder
+# Commented out to allow GitHub Pages to serve your static site
+# dist/
+# build/
+# *.tsbuildinfo
