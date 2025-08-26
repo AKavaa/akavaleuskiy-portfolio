@@ -2,13 +2,12 @@
 
 
 Contact
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
 
 interface ContactFormData {
   name: string;
@@ -27,39 +26,60 @@ export default function Contact() {
 
   const { toast } = useToast();
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
-      const webhookUrl = (import.meta as any).env?.VITE_CONTACT_WEBHOOK_URL as string | undefined;
-      if (webhookUrl) {
-        const res = await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        });
-        if (!res.ok) {
-          const text = await res.text();
-          throw new Error(`${res.status}: ${text || res.statusText}`);
-        }
-        return res.json();
-      }
-      const res = await apiRequest("POST", "/api/contact", data);
-      return res.json();
-    },
-    onSuccess: (json: any) => {
+  const [isSending, setIsSending] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    // Initialize EmailJS with your public key
+    emailjs.init("zQkBsr5sx1EqHN_0D");
+  }, []);
+
+  const sendEmail = async (data: ContactFormData) => {
+    try {
+      setIsSending(true);
+
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        subject: data.subject || 'New message from portfolio contact form',
+        message: data.message,
+        to_email: 'alex.kavaleuskiy98@gmail.com'
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_33htayo', // Replace with your EmailJS service ID
+        'template_r50tivk', // Replace with your EmailJS template ID
+        templateParams,
+        'zQkBsr5sx1EqHN_0D' // Replace with your EmailJS public key
+      );
+
+      // Show success message with toast
       toast({
-        title: "Message sent!",
-        description: json?.message || "Thanks! Your message was sent successfully — I'll reply soon.",
+        title: "✅ Message Sent Successfully!",
+        description: "Thank you for reaching out! I'll get back to you as soon as possible.",
+        duration: 5000,
+        className: "bg-green-50 text-green-800 border border-green-200"
       });
+
+      // Reset form
       setFormData({ name: "", email: "", subject: "", message: "" });
-    },
-    onError: (error) => {
+      setIsSuccess(true);
+
+      // Reset success state after 5 seconds
+      setTimeout(() => setIsSuccess(false), 5000);
+
+    } catch (error) {
+      console.error('Error sending email:', error);
       toast({
         title: "Error sending message",
-        description: (error as Error).message || "Please try again later.",
+        description: "There was an error sending your message. Please try again later.",
         variant: "destructive",
       });
-    },
-  });
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,10 +91,9 @@ export default function Contact() {
       });
       return;
     }
-    contactMutation.mutate(formData);
+    sendEmail(formData);
   };
 
-  const showInlineSuccess = contactMutation.isSuccess && !contactMutation.isError;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({
@@ -234,13 +253,32 @@ export default function Contact() {
               </div>
               <Button
                 type="submit"
-                disabled={contactMutation.isPending}
-                className="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 transition-colors duration-200 disabled:opacity-50"
+                disabled={isSending}
+                className={`w-full px-6 py-3 text-white font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 transition-all duration-300 transform ${isSuccess ? 'scale-[1.02]' : ''} disabled:opacity-50 ${
+                  isSuccess 
+                    ? 'bg-green-600 hover:bg-green-700 focus:ring-green-500 shadow-lg shadow-green-500/30' 
+                    : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500 hover:shadow-lg hover:shadow-blue-500/20'
+                }`}
               >
-                {contactMutation.isPending ? "Sending..." : "Send Message"}
+                {isSending ? (
+                  <>
+                    <i className="fas fa-spinner fa-spin mr-2"></i>
+                    Sending...
+                  </>
+                ) : isSuccess ? (
+                  <>
+                    <i className="fas fa-check-circle mr-2 text-xl"></i>
+                    <span className="font-semibold">Message Sent Successfully!</span>
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </Button>
-              {showInlineSuccess && (
-                <p className="text-emerald-400 text-sm text-center">Thanks! Your message was sent successfully — I’ll reply soon.</p>
+              {isSuccess && (
+                <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-center animate-fade-in">
+                  <p className="font-medium">✅ Thank you for your message!</p>
+                  <p className="text-sm mt-1">I'll get back to you as soon as possible.</p>
+                </div>
               )}
             </form>
           </div>
@@ -249,4 +287,3 @@ export default function Contact() {
     </section>
   );
 }
-
