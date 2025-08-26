@@ -27,7 +27,11 @@
             "@/*": [
                 "./src/*"
             ]
-        }
+        },
+        /* ✅ Add Node types for editor support */
+        "types": [
+            "node"
+        ]
     },
     "include": [
         "src"
