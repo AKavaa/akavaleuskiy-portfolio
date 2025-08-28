@@ -2,7 +2,7 @@
   "name": "portfolio-client",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://akavaa.github.io/akavaleuskiy-portfolio",
+  "homepage": "https://akavaa.github.io/akavaleuskiy-portfolio/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages -r https://github.com/AKavaa/akavaleuskiy-portfolio.git"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
