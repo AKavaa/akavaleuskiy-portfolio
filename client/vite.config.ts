@@ -6,7 +6,7 @@ import { resolve } from 'path'
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
   const base = isProduction ? '/akavaleuskiy-portfolio/' : '/'
-  
+
   return {
     base: base,
     plugins: [react()],
