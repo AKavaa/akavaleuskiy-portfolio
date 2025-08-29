@@ -4,9 +4,10 @@ import { resolve } from 'path'
 
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
+  const base = isProduction ? '/akavaleuskiy-portfolio/' : '/'
 
   return {
-    base: isProduction ? '/akavaleuskiy-portfolio/' : '/',
+    base,
     plugins: [react()],
     resolve: {
       alias: {
@@ -19,15 +20,19 @@ export default defineConfig(({ mode }) => {
       assetsDir: 'assets',
       rollupOptions: {
         output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom', 'wouter']
+          },
           entryFileNames: 'assets/[name]-[hash].js',
           chunkFileNames: 'assets/[name]-[hash].js',
           assetFileNames: 'assets/[name]-[hash][extname]'
         }
-      }
+      },
     },
     server: {
+      historyApiFallback: true,
       port: 5173,
-      open: true,
+      open: true
     },
     preview: {
       port: 5173,
