@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
-  const base = isProduction ? '/akavaleuskiy-portfolio/' : '/'
 
   return {
-    base: base,
+    base: isProduction ? '/akavaleuskiy-portfolio/' : '/',
     plugins: [react()],
     resolve: {
       alias: {
@@ -30,7 +28,6 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 5173,
       open: true,
-      historyApiFallback: true
     },
     preview: {
       port: 5173,
