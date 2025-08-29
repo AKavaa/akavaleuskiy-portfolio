@@ -6,8 +6,14 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
   const base = isProduction ? '/akavaleuskiy-portfolio/' : '/'
 
+  // This will be available in your app via import.meta.env.BASE_URL
+  process.env.BASE_URL = base
+
   return {
     base,
+    define: {
+      'import.meta.env.BASE_URL': JSON.stringify(base)
+    },
     plugins: [react()],
     resolve: {
       alias: {
