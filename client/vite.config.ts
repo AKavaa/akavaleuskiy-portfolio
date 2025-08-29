@@ -2,18 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
+// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Using root path for both production and development
-  const base = '/'
-
-  // This will be available in your app via import.meta.env.BASE_URL
-  process.env.BASE_URL = base
+  // Use repository name as base path in production for GitHub Pages
+  const base = '/akavaleuskiy-portfolio/'
 
   return {
-    base,
-    define: {
-      'import.meta.env.BASE_URL': JSON.stringify(base)
-    },
+    base: base,
     plugins: [react()],
     resolve: {
       alias: {
@@ -26,19 +21,27 @@ export default defineConfig(({ mode }) => {
       assetsDir: 'assets',
       rollupOptions: {
         output: {
-          manualChunks: {
-            vendor: ['react', 'react-dom', 'wouter']
-          },
           entryFileNames: 'assets/[name]-[hash].js',
           chunkFileNames: 'assets/[name]-[hash].js',
-          assetFileNames: 'assets/[name]-[hash][extname]'
+          assetFileNames: (assetInfo) => {
+            // Keep the original path for files in build directory
+            if (assetInfo.name === 'profile-aleksander.jpg') {
+              return 'profile-aleksander.jpg';
+            }
+            const info = assetInfo.name.split('.');
+            const ext = info[info.length - 1];
+            if (['png', 'jpg', 'jpeg', 'gif', 'svg'].includes(ext)) {
+              return 'assets/images/[name]-[hash][extname]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          }
         }
-      },
+      }
     },
     server: {
-      historyApiFallback: true,
       port: 5173,
-      open: true
+      open: true,
+      historyApiFallback: true
     },
     preview: {
       port: 5173,
