@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
 export default defineConfig(({ mode }) => {
-  const isProduction = mode === 'production'
-  const base = isProduction ? '/akavaleuskiy-portfolio/' : '/'
+  // Using root path for both production and development
+  const base = '/'
 
   // This will be available in your app via import.meta.env.BASE_URL
   process.env.BASE_URL = base
