@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirecting...</title>
-  <script>
-    // Get the current path and redirect to the index.html with the path
-    const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const baseUrl = isLocalhost ? '' : '/akavaleuskiy-portfolio';
-    let path = window.location.pathname;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Aleksander Kavaleuskiy - Software Engineer Portfolio</title>
+    <meta name="description" content="Software Engineer specializing in Rust programming and modern web technologies. Portfolio showcasing projects and expertise." />
+    <meta property="og:title" content="Zenios Zeniou - Software Engineer Portfolio" />
+    <meta property="og:description" content="Software Engineer specializing in Rust programming and modern web technologies. Portfolio showcasing projects and expertise." />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" crossorigin src="/akavaleuskiy-portfolio/assets/index-e3c4c5e8.js"></script>
+    <link rel="stylesheet" href="/akavaleuskiy-portfolio/assets/index-2bad483f.css">
+  </head>
+  <body>
+    <div id="root"></div>
     
-    // Remove the base URL if it exists in the path
-    if (!isLocalhost && path.startsWith('/akavaleuskiy-portfolio')) {
-      path = path.replace(/^\/akavaleuskiy-portfolio/, '');
-    }
-    
-    const search = window.location.search;
-    const hash = window.location.hash;
-    
-    // Redirect to the index.html with the current path
-    window.location.href = `${baseUrl}/index.html${path}${search}${hash}`;
-  </script>
-</head>
-<body>
-  <p>Redirecting to the application...</p>
-  <p>If you are not redirected automatically, <a id="redirect-link" href="#">click here</a>.</p>
-  <script>
-    // Fallback in case the redirect doesn't work
-    document.getElementById('redirect-link').href = `${baseUrl}/index.html${path}${search}${hash}`;
-  </script>
-</body>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
 </html>
