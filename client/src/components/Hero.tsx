@@ -138,7 +138,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-emerald-500 rounded-2xl transform rotate-6 opacity-20 group-hover:opacity-40 transition-all duration-500 animate-pulse"></div>
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-2xl transform -rotate-3 opacity-10 group-hover:opacity-30 transition-all duration-500 animate-pulse" style={{ animationDelay: "1s" }}></div>
               <img
-                src={`${import.meta.env.BASE_URL}profile-aleksander.jpg`}
+                src="/build/profile-aleksander.jpg"
                 alt="Professional headshot of Aleksander Kavaleuskiy"
                 className="relative rounded-2xl shadow-2xl w-80 h-80 object-cover border border-slate-700 group-hover:scale-105 group-hover:shadow-blue-500/25 transition-all duration-500 transform hover:rotate-1"
               />
