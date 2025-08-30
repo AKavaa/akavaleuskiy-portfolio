@@ -4,8 +4,10 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Use repository name as base path in production for GitHub Pages
-  const base = '/akavaleuskiy-portfolio/'
+  // Use different base paths for different environments
+  // For custom domain: use '/'
+  // For GitHub Pages without custom domain: use '/akavaleuskiy-portfolio/'
+  const base = process.env.GITHUB_PAGES_CUSTOM_DOMAIN ? '/' : '/akavaleuskiy-portfolio/'
 
   return {
     base: base,
