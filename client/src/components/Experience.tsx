@@ -8,7 +8,7 @@ export default function Experience() {
       title: "IT Intern",
       company: "UCLan Cyprus",
       location: "Cyprus",
-      period: "May 2024 - August 2024",
+      period: "May 2025 - September 2025",
       current: false,
       description:
         "Provided technical support and troubleshooting for faculty and staff computer systems. Assisted with network infrastructure maintenance and software installations.",
