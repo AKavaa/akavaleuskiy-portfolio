@@ -22,7 +22,7 @@ export default function Experience() {
       title: "University Projects",
       company: "UCLan Cyprus",
       location: "Cyprus",
-      period: "2022 - Present",
+      period: "2023 - Present",
       current: true,
       description:
         "Various software development projects as part of university coursework, focusing on web development, database management, and object-oriented programming.",
@@ -40,7 +40,7 @@ export default function Experience() {
       title: "Bachelor of Computer Science",
       institution: "UCLan Cyprus",
       location: "Cyprus",
-      period: "2022 - Present",
+      period: "2023 - Present",
       current: true,
       description: "Currently pursuing a degree in Computer Science with focus on software engineering, web development, and database management.",
     },
