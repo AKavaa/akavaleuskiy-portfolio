@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
   <script>
-    // Get the current path and redirect to the index.html with the path
+    // Check if we're on the custom domain or localhost
+    const isCustomDomain = window.location.hostname === 'alexkavaleuskiy.me';
     const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
-    const baseUrl = isLocalhost ? '' : '/akavaleuskiy-portfolio';
+    
+    // Set base URL based on the current host
+    let baseUrl = '';
+    if (!isLocalhost && !isCustomDomain) {
+      baseUrl = '/akavaleuskiy-portfolio';
+    }
+    
     let path = window.location.pathname;
     
-    // Remove the base URL if it exists in the path
-    if (!isLocalhost && path.startsWith('/akavaleuskiy-portfolio')) {
+    // Remove the base URL if it exists in the path (for GitHub Pages without custom domain)
+    if (!isLocalhost && !isCustomDomain && path.startsWith('/akavaleuskiy-portfolio')) {
       path = path.replace(/^\/akavaleuskiy-portfolio/, '');
     }
     

@@ -4,10 +4,11 @@ import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // Use different base paths for different environments
-  // For custom domain: use '/'
-  // For GitHub Pages without custom domain: use '/akavaleuskiy-portfolio/'
-  const base = process.env.GITHUB_PAGES_CUSTOM_DOMAIN ? '/' : '/akavaleuskiy-portfolio/'
+  // Set base URL based on environment
+  // For production builds, use relative paths (./) for better compatibility
+  // with both GitHub Pages and custom domains
+  const isProduction = mode === 'production';
+  const base = isProduction ? './' : '/';
 
   return {
     base: base,

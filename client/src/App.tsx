@@ -6,11 +6,16 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/Home";
 import NotFound from "@/pages/not-found";
 
-// Get base URL from environment or use default
+// Handle base URL for both development and production
 const getBase = () => {
-  // @ts-ignore - Vite provides this at build time
-  const env = import.meta.env;
-  return env.BASE_URL || '/akavaleuskiy-portfolio';
+  // In development or when accessing via custom domain, use root path
+  if (window.location.hostname === 'alexkavaleuskiy.me' || 
+      window.location.hostname === 'localhost' || 
+      window.location.hostname === '127.0.0.1') {
+    return '/';
+  }
+  // For GitHub Pages without custom domain
+  return '/akavaleuskiy-portfolio';
 };
 
 function Router() {
