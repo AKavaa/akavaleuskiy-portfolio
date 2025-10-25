@@ -17,7 +17,8 @@ import {
   SiCss3,
   SiReact,
   SiMysql,
-  SiGit
+  SiGit,
+  SiDocker
 } from 'react-icons/si';
 
 export default function About() {
@@ -35,6 +36,8 @@ export default function About() {
     { name: "React", icon: SiReact, color: "text-cyan-400", delay: "0.8s" },
     { name: "SQL", icon: SiMysql, color: "text-blue-700", delay: "0.9s" },
     { name: "Git", icon: SiGit, color: "text-orange-600", delay: "1s" },
+    { name: "Docker", icon: SiDocker, color: "text-blue-600", delay: "1s" },
+
   ];
 
   const highlights = [
@@ -44,7 +47,7 @@ export default function About() {
     { label: "Internships", value: "1", icon: "fas fa-lightbulb" },
   ];
 
-  const learning = ["React", "mongoDB", "NodeJS"];
+  const learning = ["React", "mongoDB", "NodeJS", "Dart"];
 
   return (
     <section id="about" className="py-20 bg-slate-900 relative overflow-hidden scroll-mt-24">
@@ -106,16 +109,10 @@ export default function About() {
             <div>
               <h3 className="text-2xl font-bold text-white mb-4 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>My Journey</h3>
               <p className="text-slate-300 leading-relaxed mb-4 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                Currently pursuing a Computer Science degree at UCLan Cyprus, I've developed a strong passion for
-                software development and problem-solving. My journey began at Pascal English School where I gained
-                a solid foundation in ICT and mathematics, developing critical thinking and problem-solving skills
-                that have been invaluable in my software engineering pursuits.
+                As a Computer Science student at UCLan Cyprus, I’ve developed a strong passion for software engineering and problem-solving. My studies have provided me with a solid foundation in programming, data structures, and system design, enabling me to build efficient and maintainable software solutions.
               </p>
               <p className="text-slate-300 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                I'm particularly interested in web development, database management, and creating efficient,
-                user-friendly applications. My experience includes both academic projects and practical
-                internships, where I've gained hands-on experience with enterprise-level IT operations and
-                software development workflows.
+                I’m particularly interested in full-stack web development, backend engineering, and database management. Through academic projects and hands-on experience, I’ve learned to design and implement responsive, user-focused applications while following best development practices. I’m continuously expanding my technical expertise and striving to contribute to impactful real-world projects in the tech industry.
               </p>
             </div>
 

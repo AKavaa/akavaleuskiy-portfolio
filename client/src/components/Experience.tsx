@@ -42,7 +42,7 @@ export default function Experience() {
       location: "Cyprus",
       period: "2023 - Present",
       current: true,
-      description: "Currently pursuing a degree in Computer Science with focus on software engineering, web development, and database management.",
+      description: "Bachelor’s degree in Computer Science in progress at UCLan Cyprus — shaping expertise in software engineering, full-stack development, and data-driven applications to create powerful, user-focused digital solutions.",
     },
     {
       title: "High School Diploma",
