@@ -141,15 +141,7 @@ export default function About() {
             </div>
 
             <div className="pt-4 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
-              <a
-                href="/resume.pdf"
-                download
-                className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-800 to-slate-700 text-white font-medium rounded-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-300 border border-slate-700 hover:border-blue-500 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-              >
-                <i className="fas fa-download mr-2 group-hover:animate-bounce"></i>
-                Download Resume
-                <i className="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-200"></i>
-              </a>
+
             </div>
           </div>
         </div>
