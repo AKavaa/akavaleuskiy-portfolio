@@ -140,7 +140,7 @@ export default function Hero() {
               <img
                 src="/profile-aleksander.jpg"
                 alt="Professional headshot of Aleksander Kavaleuskiy"
-                className="relative rounded-2xl shadow-2xl w-80 h-80 object-cover border border-slate-700 group-hover:scale-105 group-hover:shadow-blue-500/25 transition-all duration-500 transform hover:rotate-1"
+                className="relative rounded-2xl shadow-2xl w-80 h-80 object-cover object-[center_35%] border border-slate-700 group-hover:scale-105 group-hover:shadow-blue-500/25 transition-all duration-500 transform hover:rotate-1"
               />
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-blue-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
