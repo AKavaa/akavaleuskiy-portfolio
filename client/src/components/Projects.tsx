@@ -69,7 +69,7 @@ export default function Projects() {
       image: "https://images.contentstack.io/v3/assets/blt822c60c126c92e3a/blt5eafad84b9fc7361/64d291de4d5a8492f88d5b53/Sudoku_game_01_en_prev.jpg",
       imageAlt: "Sudoku puzzle solver algorithm interface",
       technologies: ["C++", "Algorithms", "Backtracking"],
-      techColors: ["orange", "purple", "blue"],
+      techColors: ["blue", "purple", "green"],
       metrics: ["Algorithm Implementation", "C++"],
       githubUrl: "https://github.com/AKavaa/SudokuSolver",
       liveUrl: "#",
@@ -86,7 +86,20 @@ export default function Projects() {
       githubUrl: "https://github.com/AKavaa/Web-Technologies--Assignment-2",
       liveUrl: "#",
     },
+    {
+      title: "Code-Quest Mobile Application",
+      description:
+        "Algorithmic Quest is an interactive platform designed to help learners strengthen their problem-solving and algorithmic thinking abilities through coding challenges — but with a twist: each challenge is presented as part of a game-like journey where logic, creativity, and efficiency determine your progress.",
+      image: "/Code-Quest.JPG",
+      imageAlt: "Modern mobile application with advanced features",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      techColors: ["green", "blue", "purple"],
+      metrics: ["Full-stack Development", "Mobile Application"],
+      githubUrl: "https://github.com/AKavaa/Code-Quest",
+      liveUrl: "#",
+    },
   ];
+
 
   const getColorClass = (color: string) => {
     const colorMap: Record<string, string> = {
