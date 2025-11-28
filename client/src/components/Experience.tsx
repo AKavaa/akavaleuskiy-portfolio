@@ -1,15 +1,28 @@
-
-
-
-Experience
 export default function Experience() {
   const experiences = [
+    {
+      title: "Front End Programmer Intern",
+      company: "SICILIAMIA",
+      location: "Remote",
+      period: "December 2025 - Present",
+      current: true,
+      comingSoon: true, // Set to true if not started yet
+      logo: "/siciliamia_logo.png", // Add your logo here
+      description:
+        "Contributing to front-end projects, learning and applying modern web technologies. Working with HTML, CSS, JavaScript, React, and collaborating in an agile development team environment.",
+      achievements: [
+        "Developing responsive and interactive user interfaces"
+
+      ],
+    },
     {
       title: "IT Intern",
       company: "UCLan Cyprus",
       location: "Cyprus",
       period: "May 2025 - September 2025",
       current: false,
+      comingSoon: false,
+      logo: "/uclan_logo.png",
       description:
         "Provided technical support and troubleshooting for faculty and staff computer systems. Assisted with network infrastructure maintenance and software installations.",
       achievements: [
@@ -24,6 +37,8 @@ export default function Experience() {
       location: "Cyprus",
       period: "2023 - Present",
       current: true,
+      comingSoon: false,
+      logo: "/uclan_logo.png",
       description:
         "Various software development projects as part of university coursework, focusing on web development, database management, and object-oriented programming.",
       achievements: [
@@ -42,7 +57,8 @@ export default function Experience() {
       location: "Cyprus",
       period: "2023 - Present",
       current: true,
-      description: "Bachelor’s degree in Computer Science in progress at UCLan Cyprus — shaping expertise in software engineering, full-stack development, and data-driven applications to create powerful, user-focused digital solutions.",
+      logo: "/uclan_logo.png",
+      description: "Bachelor's degree in Computer Science in progress at UCLan Cyprus — shaping expertise in software engineering, full-stack development, and data-driven applications to create powerful, user-focused digital solutions.",
     },
     {
       title: "High School Diploma",
@@ -50,6 +66,7 @@ export default function Experience() {
       location: "Cyprus",
       period: "2016 - 2022",
       current: false,
+      logo: "/pascal_logo.png",
       description: "Gained a strong foundation in ICT and mathematics, developing critical thinking, problem-solving skills, and technical knowledge. This education provided a solid base for pursuing software engineering, enabling me to tackle coding projects, understand algorithms, and apply logical solutions effectively.",
     },
   ];
@@ -73,13 +90,28 @@ export default function Experience() {
                 key={index}
                 className="bg-slate-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-slate-700"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{experience.title}</h3>
-                    <p className="text-lg text-blue-400 font-semibold">{experience.company}</p>
-                    <p className="text-slate-300">{experience.location}</p>
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                  <div className="flex items-start gap-4 flex-1">
+                    {/* Company Logo */}
+                    {experience.logo && (
+                      <div className="flex-shrink-0 w-16 h-16 bg-slate-800/50 rounded-xl p-2 flex items-center justify-center shadow-md border border-slate-700">
+                        <img
+                          src={experience.logo}
+                          alt={`${experience.company} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
+
+                    {/* Company Info */}
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2">{experience.title}</h3>
+                      <p className="text-lg text-blue-400 font-semibold">{experience.company}</p>
+                      <p className="text-slate-300">{experience.location}</p>
+                    </div>
                   </div>
-                  <div className="mt-4 lg:mt-0">
+
+                  <div className="mt-4 lg:mt-0 flex gap-2 flex-wrap">
                     <span
                       className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${experience.current
                         ? "bg-blue-500/20 text-blue-300 border border-blue-500/30"
@@ -88,13 +120,20 @@ export default function Experience() {
                     >
                       {experience.period}
                     </span>
+                    {experience.comingSoon && (
+                      <span className="inline-block px-4 py-2 rounded-full text-sm font-medium bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                        <i className="fas fa-clock mr-1"></i>
+                        Coming Soon
+                      </span>
+                    )}
                   </div>
                 </div>
+
                 <div className="space-y-4">
                   <p className="text-slate-300 leading-relaxed">{experience.description}</p>
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-2">
-                      Key {experience.current ? "Achievements" : "Contributions"}:
+                      Key {experience.current ? "Responsibilities" : "Contributions"}:
                     </h4>
                     <ul className="space-y-2 text-slate-300">
                       {experience.achievements.map((achievement, achievementIndex) => (
@@ -120,12 +159,27 @@ export default function Experience() {
                 key={index}
                 className="bg-slate-900 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 border border-slate-700"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{edu.title}</h3>
-                    <p className="text-lg text-emerald-400 font-semibold">{edu.institution}</p>
-                    <p className="text-slate-300">{edu.location}</p>
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
+                  <div className="flex items-start gap-4 flex-1">
+                    {/* Institution Logo */}
+                    {edu.logo && (
+                      <div className="flex-shrink-0 w-16 h-16 bg-slate-800/50 rounded-xl p-2 flex items-center justify-center shadow-md border border-slate-700">
+                        <img
+                          src={edu.logo}
+                          alt={`${edu.institution} logo`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    )}
+
+                    {/* Institution Info */}
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white mb-2">{edu.title}</h3>
+                      <p className="text-lg text-emerald-400 font-semibold">{edu.institution}</p>
+                      <p className="text-slate-300">{edu.location}</p>
+                    </div>
                   </div>
+
                   <div className="mt-4 lg:mt-0">
                     <span
                       className={`inline-block px-4 py-2 rounded-full text-sm font-medium ${edu.current
@@ -137,6 +191,7 @@ export default function Experience() {
                     </span>
                   </div>
                 </div>
+
                 <div className="space-y-4">
                   <p className="text-slate-300 leading-relaxed">{edu.description}</p>
                 </div>
@@ -148,5 +203,3 @@ export default function Experience() {
     </section>
   );
 }
-
-
