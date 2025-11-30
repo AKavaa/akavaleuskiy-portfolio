@@ -16,7 +16,7 @@ export default function Experience() {
       ],
     },
     {
-      title: "IT Intern",
+      title: "Information Technology Intern",
       company: "UCLan Cyprus",
       location: "Cyprus",
       period: "May 2025 - September 2025",
