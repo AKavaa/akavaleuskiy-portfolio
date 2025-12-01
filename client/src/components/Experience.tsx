@@ -6,7 +6,7 @@ export default function Experience() {
       location: "Remote",
       period: "December 2025 - Present",
       current: true,
-      comingSoon: true, // Set to true if not started yet
+      comingSoon: false, // Set to true if not started yet
       logo: "/siciliamia_logo.png", // Add your logo here
       description:
         "Contributing to front-end projects, learning and applying modern web technologies. Working with HTML, CSS, JavaScript, React, and collaborating in an agile development team environment.",
