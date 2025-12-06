@@ -11,7 +11,10 @@ export default function Experience() {
       description:
         "Contributing to front-end projects, learning and applying modern web technologies. Working with HTML, CSS, JavaScript, React and collaborating in an agile development team environment.",
       achievements: [
-        "Developing responsive and interactive user interfaces"
+        "Contributing to front-end features using React, JavaScript, HTML, CSS/SCSS, and modular component architectures.",
+        "Learning and applying best practices for version control, task branching, and environment setup.",
+        "	Identifying UI inconsistencies and improving user experience.",
+        "Maintaining responsive layouts across desktop, tablet, and mobile breakpoints."
 
       ],
     },
