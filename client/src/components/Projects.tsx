@@ -98,6 +98,18 @@ export default function Projects() {
       githubUrl: "https://github.com/AKavaa/Code-Quest",
       liveUrl: "#",
     },
+    {
+      title: "Smart Campus CLI application",
+      description:
+        "Algorithmic Quest is an interactive platform designed to help learners strengthen their problem-solving and algorithmic thinking abilities through coding challenges — but with a twist: each challenge is presented as part of a game-like journey where logic, creativity, and efficiency determine your progress.",
+      image: "/Code-Quest.JPG",
+      imageAlt: "Modern mobile application with advanced features",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      techColors: ["green", "blue", "purple"],
+      metrics: ["Full-stack Development", "Mobile Application"],
+      githubUrl: "https://github.com/AKavaa/Code-Quest",
+      liveUrl: "#",
+    },
   ];
 
 
