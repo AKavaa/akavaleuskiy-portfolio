@@ -101,12 +101,12 @@ export default function Projects() {
     {
       title: "Smart Campus CLI application",
       description:
-        "Algorithmic Quest is an interactive platform designed to help learners strengthen their problem-solving and algorithmic thinking abilities through coding challenges — but with a twist: each challenge is presented as part of a game-like journey where logic, creativity, and efficiency determine your progress.",
-      image: "/Code-Quest.JPG",
+        "A C++ object-oriented programming demonstration implementing a smart home device management system using inheritance and polymorphism.",
+      image: "https://qnextech.com/wp-content/uploads/2023/01/jh-18.png",
       imageAlt: "Modern mobile application with advanced features",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      techColors: ["green", "blue", "purple"],
-      metrics: ["Full-stack Development", "Mobile Application"],
+      technologies: ["C++"],
+      techColors: ["green"],
+      metrics: ["Software Development", "CLI Application"],
       githubUrl: "https://github.com/AKavaa/Code-Quest",
       liveUrl: "#",
     },
