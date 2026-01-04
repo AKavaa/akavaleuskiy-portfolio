@@ -99,7 +99,7 @@ export default function Projects() {
       liveUrl: "#",
     },
     {
-      title: "Smart Campus CLI application",
+      title: "Smart Campus CLI Application",
       description:
         "A C++ object-oriented programming demonstration implementing a smart home device management system using inheritance and polymorphism.",
       image: "https://qnextech.com/wp-content/uploads/2023/01/jh-18.png",
@@ -111,14 +111,14 @@ export default function Projects() {
       liveUrl: "#",
     },
     {
-      title: "Smart Campus CLI application",
+      title: "Orbit Track Mobile Application",
       description:
-        "A C++ object-oriented programming demonstration implementing a smart home device management system using inheritance and polymorphism.",
-      image: "https://qnextech.com/wp-content/uploads/2023/01/jh-18.png",
-      imageAlt: "Modern mobile application with advanced features",
-      technologies: ["C++"],
-      techColors: ["green"],
-      metrics: ["Software Development", "CLI Application"],
+        "OrbitTrack A Flutter mobile app for real-time satellite tracking using NASA's TLE API. Features an intuitive dark-themed interface that transforms complex orbital data into accessible visualizations. Built with HCI principles for seamless navigation and excellent user experience.",
+      image: "https://blog.neuraspace.com/hs-fs/hubfs/Blog_LinkedIn_Neura%20(12)-2.png?width=804&height=420&name=Blog_LinkedIn_Neura%20(12)-2.png",
+      imageAlt: "Modern mobile application with advanced tracking features",
+      technologies: ["Dart", "FLutter"],
+      techColors: ["green", "blue"],
+      metrics: ["Software Development", "Mobile Application"],
       githubUrl: "https://github.com/AKavaa/Code-Quest",
       liveUrl: "#",
     },
