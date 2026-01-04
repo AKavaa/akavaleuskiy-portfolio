@@ -110,6 +110,18 @@ export default function Projects() {
       githubUrl: "https://github.com/AKavaa/Code-Quest",
       liveUrl: "#",
     },
+    {
+      title: "Smart Campus CLI application",
+      description:
+        "A C++ object-oriented programming demonstration implementing a smart home device management system using inheritance and polymorphism.",
+      image: "https://qnextech.com/wp-content/uploads/2023/01/jh-18.png",
+      imageAlt: "Modern mobile application with advanced features",
+      technologies: ["C++"],
+      techColors: ["green"],
+      metrics: ["Software Development", "CLI Application"],
+      githubUrl: "https://github.com/AKavaa/Code-Quest",
+      liveUrl: "#",
+    },
   ];
 
 
