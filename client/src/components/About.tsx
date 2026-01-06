@@ -19,6 +19,7 @@ import {
   SiMysql,
   SiGit,
   SiDocker,
+  SiDart,
 } from 'react-icons/si';
 
 export default function About() {
@@ -34,6 +35,7 @@ export default function About() {
     { name: "HTML5", icon: SiHtml5, color: "text-orange-500", delay: "0.6s" },
     { name: "CSS3", icon: SiCss3, color: "text-blue-400", delay: "0.7s" },
     { name: "Flutter", icon: SiFlutter, color: "text-cyan-400", delay: "0.8s" },
+    { name: "Dart", icon: SiDart, color: "text-cyan-400", delay: "0.8s" },
     { name: "SQL", icon: SiMysql, color: "text-blue-700", delay: "0.9s" },
     { name: "Git", icon: SiGit, color: "text-orange-600", delay: "1s" },
     { name: "Docker", icon: SiDocker, color: "text-blue-600", delay: "1s" },
