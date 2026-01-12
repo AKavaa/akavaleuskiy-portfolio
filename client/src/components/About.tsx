@@ -44,7 +44,7 @@ export default function About() {
 
   const highlights = [
     { label: "Years Coding", value: "3+", icon: "fas fa-code" },
-    { label: "Projects", value: "8+", icon: "fas fa-layer-group" },
+    { label: "Projects", value: "10+", icon: "fas fa-layer-group" },
     { label: "Technologies", value: "10+", icon: "fas fa-laptop-code" },
     { label: "Internships", value: "2", icon: "fas fa-lightbulb" },
   ];
