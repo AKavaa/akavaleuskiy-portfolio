@@ -49,7 +49,7 @@ export default function About() {
     { label: "Internships", value: "2", icon: "fas fa-lightbulb" },
   ];
 
-  const learning = ["Flutter", "mongoDB", "Dart", "Docker"];
+  const learning = ["Flutter", "Dart", "mongoDB", "Docker"];
 
   return (
     <section id="about" className="py-20 bg-slate-900 relative overflow-hidden scroll-mt-24">
