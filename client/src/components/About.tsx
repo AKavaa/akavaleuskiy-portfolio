@@ -8,7 +8,7 @@ About
 import { useState } from "react";
 import {
   SiCplusplus,
-  SiMongodb,
+  SiSharp,
   SiJavascript,
   SiNodedotjs,
   SiPhp,
@@ -20,6 +20,7 @@ import {
   SiGit,
   SiDocker,
   SiDart,
+  SiDotnet
 } from 'react-icons/si';
 
 export default function About() {
@@ -27,7 +28,8 @@ export default function About() {
 
   const skills = [
     { name: "C++", icon: SiCplusplus, color: "text-blue-500", delay: "0s" },
-    { name: "MongoDB", icon: SiMongodb, color: "text-green-500", delay: "0.1s" },
+    { name: "C#", icon: SiSharp, color: "text-purple-500", delay: "0.1s" },
+    { name: ".NET", icon: SiDotnet, color: "text-indigo-500", delay: "0.1s" },
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", delay: "0.2s" },
     { name: "Node.js", icon: SiNodedotjs, color: "text-green-600", delay: "0.3s" },
     { name: "PHP", icon: SiPhp, color: "text-purple-500", delay: "0.4s" },
@@ -49,7 +51,7 @@ export default function About() {
     { label: "Internships", value: "2", icon: "fas fa-lightbulb" },
   ];
 
-  const learning = ["Flutter", "Dart", "mongoDB", "Docker"];
+  const learning = ["Flutter", "Dart", "Docker", ".NET"];
 
   return (
     <section id="about" className="py-20 bg-slate-900 relative overflow-hidden scroll-mt-24">
