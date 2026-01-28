@@ -159,7 +159,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -177,7 +177,7 @@ export default function Projects() {
                   alt={project.imageAlt}
                   loading="lazy"
                   decoding="async"
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-32 sm:h-40 md:h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent group-hover:from-slate-900/60 group-hover:via-slate-900/20 transition-all duration-500"></div>
 
@@ -195,9 +195,9 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="p-6">
+              <div className="p-3 sm:p-4 md:p-6">
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
+                  <h3 className="text-sm sm:text-base md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
                   <div className="flex space-x-2">
                     <a
                       href={project.githubUrl}
@@ -220,20 +220,20 @@ export default function Projects() {
                   </div>
                 </div>
 
-                <p className="text-slate-300 mb-4 leading-relaxed text-sm group-hover:text-slate-200 transition-colors duration-300">{project.description}</p>
+                <p className="text-slate-300 mb-3 sm:mb-4 leading-relaxed text-xs sm:text-sm group-hover:text-slate-200 transition-colors duration-300 line-clamp-3">{project.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1 sm:gap-2 mb-3 sm:mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={tech}
-                      className={`px-2 py-1 rounded-full text-xs font-medium border transition-all duration-300 transform hover:scale-105 hover:rotate-1 ${getColorClass(project.techColors[techIndex])}`}
+                      className={`px-1 sm:px-2 py-1 rounded-full text-xs font-medium border transition-all duration-300 transform hover:scale-105 hover:rotate-1 ${getColorClass(project.techColors[techIndex])}`}
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="border-t border-slate-700 pt-3">
+                <div className="border-t border-slate-700 pt-2 sm:pt-3">
                   <div className="flex items-center justify-between text-xs text-slate-400">
                     <span className="group-hover:text-emerald-400 transition-colors duration-300">{project.metrics[0]}</span>
                     <span className="group-hover:text-blue-400 transition-colors duration-300">{project.metrics[1]}</span>
