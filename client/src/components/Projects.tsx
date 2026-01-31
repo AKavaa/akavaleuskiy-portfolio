@@ -107,7 +107,7 @@ export default function Projects() {
       technologies: ["C++"],
       techColors: ["green"],
       metrics: ["Software Development", "CLI Application"],
-      githubUrl: "https://github.com/AKavaa/Code-Quest",
+      githubUrl: "https://github.com/AKavaa/SmartCampus",
       liveUrl: "#",
     },
     {
@@ -119,7 +119,7 @@ export default function Projects() {
       technologies: ["Dart", "FLutter"],
       techColors: ["green", "blue"],
       metrics: ["Software Development", "Mobile Application"],
-      githubUrl: "https://github.com/AKavaa/Code-Quest",
+      githubUrl: "https://github.com/AKavaa/OrbitTrack",
       liveUrl: "#",
     },
   ];
@@ -161,9 +161,12 @@ export default function Projects() {
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {projects.map((project, index) => (
-            <div
+            <a
               key={index}
-              className={`bg-slate-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 transform group border border-slate-700 animate-fade-in-up`}
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-slate-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-500 transform group border border-slate-700 animate-fade-in-up block cursor-pointer`}
               style={{
                 animationDelay: `${index * 0.1}s`,
                 transform: hoveredProject === index ? 'scale(1.05) rotateY(5deg)' : 'scale(1) rotateY(0deg)'
@@ -199,19 +202,18 @@ export default function Projects() {
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-sm sm:text-base md:text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
                   <div className="flex space-x-2">
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                    <span
+                      onClick={(e) => e.stopPropagation()}
+                      className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12 cursor-pointer"
                     >
                       <i className="fab fa-github text-lg group-hover:animate-bounce"></i>
-                    </a>
+                    </span>
                     {project.liveUrl !== "#" && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
                         className="text-slate-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                       >
                         <i className="fas fa-external-link-alt text-lg group-hover:animate-bounce"></i>
@@ -243,7 +245,7 @@ export default function Projects() {
 
               {/* Hover overlay effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-            </div>
+            </a>
           ))}
         </div>
 
