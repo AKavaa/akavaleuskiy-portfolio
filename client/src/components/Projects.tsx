@@ -121,6 +121,20 @@ export default function Projects() {
       metrics: ["Software Development", "Mobile Application"],
       githubUrl: "https://github.com/AKavaa/OrbitTrack",
       liveUrl: "#",
+
+    },
+    {
+      title: "Smart Traffic Control System",
+      description:
+        "This project implements a Smart Traffic Controller responsible for coordinating vehicle signals, pedestrian crossings, and timing logic for a smart traffic light system. The solution is developed using a Test-Driven Development (TDD) approach, ensuring all functionality is specified, verified, and validated through automated unit tests.",
+      image: "https://img.freepik.com/free-vector/isometric-traffic-road-barriers-composition-city-road-intersection-scenery-with-traffic-cones-cars-people-vector-illustration_1284-84078.jpg?semt=ais_hybrid&w=740&q=80",
+      imageAlt: "Modern mobile application with advanced tracking features",
+      technologies: ["C#", ".NET"],
+      techColors: ["green", "purple"],
+      metrics: ["Software Development", "Unit Testing"],
+      githubUrl: "https://github.com/AKavaa/Smart-Traffic-Controller",
+      liveUrl: "#",
+
     },
   ];
 
