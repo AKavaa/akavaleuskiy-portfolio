@@ -16,7 +16,8 @@ import {
   SiGit,
   SiDocker,
   SiDart,
-  SiDotnet
+  SiDotnet,
+  SiSass
 } from 'react-icons/si';
 
 export default function About() {
@@ -32,6 +33,7 @@ export default function About() {
     { name: "Python", icon: SiPython, color: "text-blue-600", delay: "0.5s" },
     { name: "HTML5", icon: SiHtml5, color: "text-orange-500", delay: "0.6s" },
     { name: "CSS3", icon: SiCss3, color: "text-blue-400", delay: "0.7s" },
+    { name: "SCSS", icon: SiSass, color: "text-red-400", delay: "0.7s" },
     { name: "Flutter", icon: SiFlutter, color: "text-cyan-400", delay: "0.8s" },
     { name: "Dart", icon: SiDart, color: "text-cyan-400", delay: "0.8s" },
     { name: "SQL", icon: SiMysql, color: "text-blue-700", delay: "0.9s" },
