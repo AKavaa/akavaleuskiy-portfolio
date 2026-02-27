@@ -26,18 +26,7 @@ export default function Projects() {
       githubUrl: "https://github.com/AKavaa/DinoRun-Game",
       liveUrl: "#",
     },
-    {
-      title: "UCLan Website",
-      description:
-        "A comprehensive web application built for UCLan featuring a complete e-commerce system with product management, shopping cart functionality, and modern responsive design.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
-      imageAlt: "Modern university website with e-commerce features",
-      technologies: ["HTML", "CSS", "PHP", "JavaScript"],
-      techColors: ["orange", "blue", "purple", "yellow"],
-      metrics: ["E-commerce System", "Responsive Design"],
-      githubUrl: "https://github.com/AKavaa/UCLan-Website",
-      liveUrl: "#",
-    },
+
     {
       title: "Spheres.io",
       description:
@@ -75,7 +64,7 @@ export default function Projects() {
       liveUrl: "#",
     },
     {
-      title: "Web Technologies Assignment",
+      title: "UCLan Shopping Website",
       description:
         "Advanced web development project showcasing modern web technologies with comprehensive features including user authentication, database management, and responsive design.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500",
