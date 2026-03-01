@@ -125,6 +125,19 @@ export default function Projects() {
       liveUrl: "#",
 
     },
+    {
+      title: "Memory Card Game",
+      description:
+        "Memory Card Game (React) A dynamic and interactive Memory Card Game built with React.js",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%2Fid%2FOIP.ZflrP5tGZ8DV9w010yke6AHaGE%3Fpid%3DApi&f=1&ipt=67e8e8dad1050acdf93df6c8471c4bf4761fdee076ccf1ca7e01d5aefc888b4c&ipo=images",
+      imageAlt: "Modern mobile application with advanced tracking features",
+      technologies: ["JavaScript", "ReactJS"],
+      techColors: ["yellow", "blue"],
+      metrics: ["Software Development", "FrontEnd Development"],
+      githubUrl: "https://github.com/AKavaa/MemoryCardGame",
+      liveUrl: "#",
+
+    },
   ];
 
 
