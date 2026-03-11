@@ -26,19 +26,21 @@ export default function Projects() {
       githubUrl: "https://github.com/AKavaa/DinoRun-Game",
       liveUrl: "#",
     },
-
     {
-      title: "Spheres.io",
+      title: "AI Code Reviewer",
       description:
-        "A single-player 3D C++ game where the player controls a sphere to collect cubes for points. Features magnetic attraction mechanics and growing sphere gameplay.",
-      image: "https://img.freepik.com/premium-vector/ball-lightning-energy-power-electric-round-spheres-decent-vector-realistic-template-thunder-light_80590-22937.jpg",
-      imageAlt: "3D sphere game with cube collection mechanics",
-      technologies: ["C++", "3D Graphics", "Game Physics"],
-      techColors: ["orange", "purple", "blue"],
-      metrics: ["3D Game", "C++ Development"],
-      githubUrl: "https://github.com/AKavaa/Spheres.io",
+        "Code Reviewer — An LLM-powered tool that analyzes code in real time using Claude, providing instant feedback andsecurity checks",
+      image: "https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F2kk8xm3efonxlmajksm8.png",
+      imageAlt: "Modern mobile application with advanced tracking features",
+      technologies: ["TypeScript", "NextJS"],
+      techColors: ["blue", "white"],
+      metrics: ["Software Development", "AI Integration"],
+      githubUrl: "https://github.com/AKavaa/AI-Code-Reviewer",
       liveUrl: "#",
+
     },
+
+
     {
       title: "Treasure Hunt App",
       description:
@@ -73,6 +75,19 @@ export default function Projects() {
       techColors: ["purple", "blue", "orange", "blue"],
       metrics: ["Full-stack Development", "Database Design"],
       githubUrl: "https://github.com/AKavaa/Web-Technologies--Assignment-2",
+      liveUrl: "#",
+    },
+
+    {
+      title: "Spheres.io",
+      description:
+        "A single-player 3D C++ game where the player controls a sphere to collect cubes for points. Features magnetic attraction mechanics and growing sphere gameplay.",
+      image: "https://img.freepik.com/premium-vector/ball-lightning-energy-power-electric-round-spheres-decent-vector-realistic-template-thunder-light_80590-22937.jpg",
+      imageAlt: "3D sphere game with cube collection mechanics",
+      technologies: ["C++", "3D Graphics", "Game Physics"],
+      techColors: ["orange", "purple", "blue"],
+      metrics: ["3D Game", "C++ Development"],
+      githubUrl: "https://github.com/AKavaa/Spheres.io",
       liveUrl: "#",
     },
     {
@@ -138,6 +153,7 @@ export default function Projects() {
       liveUrl: "#",
 
     },
+
   ];
 
 
