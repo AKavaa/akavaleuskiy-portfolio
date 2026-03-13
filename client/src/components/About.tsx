@@ -31,7 +31,7 @@ export default function About() {
     { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", delay: "0.2s" },
     { name: "TypeScript", icon: SiTypescript, color: "text-blue-500", delay: "0.4s" },
     { name: "ReactJS", icon: SiReact, color: "text-blue-400", delay: "0.2s" },
-    { name: "Node.js", icon: SiNodedotjs, color: "text-green-600", delay: "0.3s" },
+    { name: "NodeJS", icon: SiNodedotjs, color: "text-green-600", delay: "0.3s" },
     { name: "Python", icon: SiPython, color: "text-blue-600", delay: "0.5s" },
     { name: "HTML5", icon: SiHtml5, color: "text-orange-500", delay: "0.6s" },
     { name: "CSS3", icon: SiCss3, color: "text-blue-400", delay: "0.7s" },
