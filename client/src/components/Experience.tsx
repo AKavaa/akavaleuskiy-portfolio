@@ -7,7 +7,7 @@ export default function Experience() {
       title: "Frontend & UX Engineering Intern",
       company: "Flowkade",
       location: "Remote",
-      period: "March 2025 - Present",
+      period: "March 2026 - Present",
       current: true,
       comingSoon: false, // Set to true if not started yet
       logo: "/Flowkade.png", // Add your logo here
