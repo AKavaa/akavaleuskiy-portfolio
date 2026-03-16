@@ -56,23 +56,7 @@ export default function Experience() {
         "Gained hands-on experience with enterprise-level IT operations and support procedures",
       ],
     },
-    {
-      title: "University Projects",
-      company: "UCLan Cyprus",
-      location: "Cyprus",
-      period: "2023 - Present",
-      current: true,
-      comingSoon: false,
-      logo: "/uclan_logo.png",
-      description:
-        "Various software development projects as part of university coursework, focusing on web development, database management, and object-oriented programming.",
-      achievements: [
-        "Web Development Projects - Building responsive and interactive web applications",
-        "Database Management Systems - Designing and implementing efficient database solutions",
-        "Object-Oriented Programming Projects - Creating modular and maintainable code",
-        "Algorithm Implementation - Solving complex problems with optimized algorithms",
-      ],
-    },
+
   ];
 
   const education = [
