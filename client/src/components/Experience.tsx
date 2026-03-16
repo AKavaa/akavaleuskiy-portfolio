@@ -1,5 +1,27 @@
 export default function Experience() {
+
+
   const experiences = [
+
+    {
+      title: "Frontend & UX Engineering Intern",
+      company: "Flowkade",
+      location: "Remote",
+      period: "March 2025 - Present",
+      current: true,
+      comingSoon: false, // Set to true if not started yet
+      logo: "/Flowkade.png", // Add your logo here
+      description:
+        "Building production-grade interfaces using Next.js, React, and TypeScript, integrating REST APIs and collaborating in an agile team to deliver full UI features for educational tools.",
+      achievements: [
+        "Building responsive, production-grade interfaces using Next.js, React, and TypeScript, delivering complete UI features from design to deployment.",
+        "Integrating REST APIs to ensure clean, reliable data flow between backend services and the frontend layer.",
+        "Collaborating in an agile team on educational tools, focusing on UX quality, code readability, and component reusability..",
+        "Learning and applying best practices for version control, task branching, and environment setup.",
+        "	Identifying UI inconsistencies and improving user experience."
+
+      ],
+    },
     {
       title: "Front-End Developer Intern",
       company: "SICILIAMIA",
