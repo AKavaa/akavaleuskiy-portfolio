@@ -16,7 +16,7 @@ export default function Experience() {
       achievements: [
         "Building responsive, production-grade interfaces using Next.js, React, and TypeScript, delivering complete UI features from design to deployment.",
         "Integrating REST APIs to ensure clean, reliable data flow between backend services and the frontend layer.",
-        "Collaborating in an agile team on educational tools, focusing on UX quality, code readability, and component reusability..",
+        "Collaborating in an agile team on educational tools, focusing on UX quality, code readability, and component reusability.",
         "Learning and applying best practices for version control, task branching, and environment setup.",
         "	Identifying UI inconsistencies and improving user experience."
 

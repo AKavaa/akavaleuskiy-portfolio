@@ -39,6 +39,18 @@ export default function Projects() {
       liveUrl: "#",
 
     },
+    {
+      title: "FastAPI Relational Tasker",
+      description:
+        "A containerized FastAPI and PostgreSQL API for scalable task orchestration, featuring a clean layered architecture and complex relational mapping",
+      image: "https://www.manageprojex.com/img/38ebde7c8cb9d4d3241bd7355f19e82f.jpg?11",
+      imageAlt: "Interactive treasure hunt application interface",
+      technologies: ["FastAPI", "Docker", "PostgreSQL"],
+      techColors: ["green", "blue", "purple"],
+      metrics: ["Asynchronous Processing", "Low Latency API-based"],
+      githubUrl: "https://github.com/AKavaa/FastAPI-Relational-Tasker",
+      liveUrl: "#",
+    },
 
 
     {
