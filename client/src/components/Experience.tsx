@@ -26,8 +26,8 @@ export default function Experience() {
       title: "Front-End Developer Intern",
       company: "SICILIAMIA",
       location: "Remote",
-      period: "December 2025 - Present",
-      current: true,
+      period: "December 2025 - April 2026",
+      current: false,
       comingSoon: false, // Set to true if not started yet
       logo: "/siciliamia_logo.png", // Add your logo here
       description:
