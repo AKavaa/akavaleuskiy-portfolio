@@ -94,7 +94,7 @@ export default function Projects() {
       title: "Spheres.io",
       description:
         "A single-player 3D C++ game where the player controls a sphere to collect cubes for points. Features magnetic attraction mechanics and growing sphere gameplay.",
-      image: "https://img.freepik.com/premium-vector/ball-lightning-energy-power-electric-round-spheres-decent-vector-realistic-template-thunder-light_80590-22937.jpg",
+      image: "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1072070/capsule_616x353.jpg?t=1601638691",
       imageAlt: "3D sphere game with cube collection mechanics",
       technologies: ["C++", "3D Graphics", "Game Physics"],
       techColors: ["orange", "purple", "blue"],
@@ -143,7 +143,7 @@ export default function Projects() {
       title: "Smart Traffic Control System",
       description:
         "This project implements a Smart Traffic Controller responsible for coordinating vehicle signals, pedestrian crossings, and timing logic for a smart traffic light system. The solution is developed using a Test-Driven Development (TDD) approach, ensuring all functionality is specified, verified, and validated through automated unit tests.",
-      image: "https://img.freepik.com/free-vector/isometric-traffic-road-barriers-composition-city-road-intersection-scenery-with-traffic-cones-cars-people-vector-illustration_1284-84078.jpg?semt=ais_hybrid&w=740&q=80",
+      image: "https://png.pngtree.com/png-clipart/20250421/original/pngtree-smart-traffic-management-system-png-image_20811362.png",
       imageAlt: "Modern mobile application with advanced tracking features",
       technologies: ["C#", ".NET"],
       techColors: ["green", "purple"],
